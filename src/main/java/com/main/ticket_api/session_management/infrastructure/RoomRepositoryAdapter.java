@@ -18,6 +18,8 @@ public class RoomRepositoryAdapter implements RoomRepository {
     @Override
     public Room save(Room room) {
         return roomJpaRepository.save(RoomJpaEntity.fromDomain(room)).toDomain();
+        // Why Do I need a .fromDomain and .toDomain() ?
+        //
     }
 
     @Override

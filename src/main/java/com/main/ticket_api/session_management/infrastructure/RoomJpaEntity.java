@@ -33,9 +33,12 @@ public class RoomJpaEntity {
 
     public static RoomJpaEntity fromDomain(Room room) {
         return new RoomJpaEntity(room.getId(), room.getName(), room.getChairsCapacity(), room.getStatus());
+        // use this method in order to save information in database when necessary
     }
 
     public Room toDomain() {
         return new Room(id, name, chairsCapacity, status);
+        // use this method to return to domain Room. Notice that RoomJpaEntity and Room are two different things?
+
     }
 }

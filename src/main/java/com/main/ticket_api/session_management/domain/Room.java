@@ -1,7 +1,7 @@
 package com.main.ticket_api.session_management.domain;
 
 public class Room {
-    private final Integer id;
+    private final Integer id; // Final means that nobody can change this attribute later
     private final String name;
     private final Integer chairsCapacity;
     private final Status status;
